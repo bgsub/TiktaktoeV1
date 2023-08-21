@@ -3,6 +3,6 @@
     public enum GameMode
     {
         Classic,
-        OneMinute
+        OneMinute   
     }
 }
