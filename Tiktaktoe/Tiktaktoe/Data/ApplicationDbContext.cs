@@ -12,4 +12,3 @@ namespace Tiktaktoe.Data
         public DbSet<Player> Players { get; set; }
     }
 }
- 

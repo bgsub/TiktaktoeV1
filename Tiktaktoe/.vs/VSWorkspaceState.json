@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Tiktaktoe",
+    "\\Tiktaktoe\\Migrations",
+    "\\Tiktaktoe\\Models",
+    "\\Tiktaktoe\\Views",
+    "\\Tiktaktoe\\Views\\Home"
+  ],
+  "SelectedNode": "\\Tiktaktoe\\Models\\ErrorViewModel.cs",
+  "PreviewInSolutionExplorer": false
+}
