@@ -10,25 +10,23 @@
 </head>
 <body onload="getRandomPositions()">
     <header>
-        <div class="container-fluid border d-flex justify-content-end modal-header border-0">
+        <div class="container-fluid border d-flex modal-header border-0">
+            <h3 class="m-0 game_font display-6 fw-bold titles"> TIX TAX TOE</h3>
             <a class="display-6 text-decoration-none fw-bold fst-italic titles" href="https://nbj-dev.me" target="_blank">N.B.J.</a>
         </div>
     </header>
     <div class="titles game_font display-4" id="random_x"> X </div>
     <div class="titles game_font display-4" id="random_o"> O </div>
     <div class="container">
-        <div class="titles d-flex align-items-center justify-content-center ">
-            <p class="game_font display-6 fw-bold"> TIX TAX TOE</p>
-        </div>
         <main role="main" class="pb-3">
-            <div class="container game-container">
+            <div class=" mt-2 container game-container">
                 @RenderBody()
             </div>
         </main>
     </div>
 
     <footer class="footer text-muted ">
-        <div class="container text-center">
+        <div class="container text-center titles">
             &copy; nbj-dev 2023 - Tiktaktoe
         </div>
     </footer>

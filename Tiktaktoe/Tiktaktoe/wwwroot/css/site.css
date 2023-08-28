@@ -8,13 +8,14 @@ html {
 }
 .game-container {
     background-color: #FFFFFF;
-    width: 50vw;
-    height: 65vh;
+    width: 450px;
+    height: 450px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 #random_x, #random_o {
     position: absolute;
-    top: 40px;
-    right: 20px;
+    top:-100px;
+    right:-100px;
     z-index: -1;
 }
 .game_font {
