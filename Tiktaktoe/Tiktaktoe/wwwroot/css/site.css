@@ -21,6 +21,18 @@ html {
 .game_font {
     font-family: "Comic Sans MS"
 }
+.menu_buttons {
+    padding: 0.5em, 1em;
+    background: linear-gradient(220deg, rgba(150, 92, 34, 1) 10%, rgba(150, 92, 34, 1) 16%, rgba(150, 92, 34, 1) 25%, rgba(150, 92, 34, 1) 40%, rgba(0, 0, 0, 1) 100%);
+    width: 40%;
+    color: #e3e2e2;
+    transition: all 200ms ease-in;
+    border: none;
+}
+.menu_buttons:hover {
+    transform: scale(1.1);
+    color: #e3e2e2;
+}
 @media (min-width: 768px) {
   html {
     font-size: 16px;
