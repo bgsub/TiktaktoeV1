@@ -1,7 +1,25 @@
 html {
   font-size: 14px;
 }
-
+.titles {
+    background: linear-gradient(180deg, rgba(150, 92, 34, 1) 10%, rgba(150, 92, 34, 0.93) 16%, rgba(150, 92, 34, 1) 20%, rgba(150, 92, 34, 1) 30%, rgba(0, 0, 0, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.game-container {
+    background-color: #FFFFFF;
+    width: 50vw;
+    height: 65vh;
+}
+#random_x, #random_o {
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    z-index: -1;
+}
+.game_font {
+    font-family: "Comic Sans MS"
+}
 @media (min-width: 768px) {
   html {
     font-size: 16px;
@@ -16,4 +34,5 @@ html {
 body {
     margin-bottom: 60px;
     background-color: #D9D9D9;
+    overflow:hidden
 }
