@@ -18,8 +18,9 @@ namespace Tiktaktoe.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Privacy(EventArgs e)
         {
+            Console.WriteLine(e.ToString());
             return View();
         }
 

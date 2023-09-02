@@ -14,9 +14,13 @@ html {
 }
 #random_x, #random_o {
     position: absolute;
-    top:-100px;
-    right:-100px;
+    top: -100px;
+    right: -100px;
     z-index: -1;
+}
+
+#classic-menu {
+    display: none;
 }
 .game_font {
     font-family: "Comic Sans MS"
