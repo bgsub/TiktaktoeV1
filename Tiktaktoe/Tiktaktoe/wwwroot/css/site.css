@@ -22,6 +22,12 @@ html {
 #classic-menu {
     display: none;
 }
+#join-menu {
+    display: none;
+}
+#settings {
+    display: none;
+}
 .game_font {
     font-family: "Comic Sans MS"
 }

@@ -1,7 +1,7 @@
-﻿function displayClassicGameMenu() {
+﻿function openAMenu(menuToOpen) {
     let mainMenu = document.getElementById("main-menu");
-    let classicGame = document.getElementById("classic-menu")
+    let menu = document.getElementById(menuToOpen);
     mainMenu.style.display = "none";
-    classicGame.style.display = "flex";
-    classicGame.style.flexDirection = "column";
+    menu.style.display = "flex";
+    menu.style.flexDirection = "column";
 }

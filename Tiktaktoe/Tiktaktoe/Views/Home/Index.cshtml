@@ -2,22 +2,16 @@
     ViewData["Title"] = "Home Page";
 }
 
-@* <div class="py-3 titles text-center">
-    <h2 class="game_font"> Game Menu </h2>
-</div>
-
-<div id="main-menu" class="w-100 flex-column gap-4 justify-content-around align-items-center main-menu">
-    <button class="fw-bolder btn menu_buttons game_font" type="button" onclick="displayClassicGameMenu()"> Classic </button>
-    <button class="fw-bolder btn menu_buttons game_font" type="button"> Join a friend </button>
-    <button class="fw-bolder btn menu_buttons game_font" type="button"> 1 min challenge </button>
-    <button class="fw-bolder btn menu_buttons game_font" type="button"> Best scores </button>
-    <button class=" mt-5 fw-bolder btn menu_buttons game_font" type="button"> Settings </button>
-</div> *@
-
 <div id="main-menu">
     @await Component.InvokeAsync("MainMenu")
 </div>
 
 <div id="classic-menu">
     @await Component.InvokeAsync("ClassicMenu")
+</div>
+<div id="join-menu">
+    @await Component.InvokeAsync("JoinAFriend")
+</div>
+<div id="settings">
+    @await Component.InvokeAsync("Settings")
 </div>
