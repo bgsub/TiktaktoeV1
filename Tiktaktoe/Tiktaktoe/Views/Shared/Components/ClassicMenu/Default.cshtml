@@ -1,9 +1,53 @@
 ﻿
+@model Player
 
 <div class="py-3 titles text-center">
     <h2 class="game_font"> New Classic Game </h2>
 </div>
 
-<div class="w-100 d-flex flex-column gap-4 justify-content-around align-items-center">
-    Here will be the classic menu buttons and things
+<div class="w-100 text-center">
+    <form class=" d-flex flex-column gap-5 justify-content-around align-items-center">
+        <div id="nickname" class="d-flex flex-column align-items-center justify-content-around">
+            <label class="game_font">Enter your nickname</label>
+           <input type="text"/>
+        </div>
+        <div id="gridSize">
+            <fieldset>
+                <legend class="game_font">select your grid size</legend>
+                <div class="d-flex align-items-center justify-content-around">
+                    <div class="d-flex flex-column align-items-center justify-content-center">
+                        <label class="game_font">3 x 3</label>
+                        <input type="radio" id="3x3" name="size" value="3 x 3" checked />
+                    </div>
+                    <div class="d-flex flex-column align-items-center justify-content-center">
+                        <label class="game_font">5 x 5</label>
+                        <input type="radio" id="3x3" name="size" value="3 x 3"/>
+                    </div>
+                </div>
+               
+            </fieldset>
+            
+
+        </div>
+        <div id="opponentChoice">
+            <fieldset>
+                <legend class="game_font">who is going to be your opponent</legend>
+                <div class="d-flex align-items-center justify-content-around">
+                    <div class="d-flex flex-column align-items-center justify-content-center">
+                        <label class="game_font"> A friend</label>
+                        <input type="radio" id="frendOpponent" name="opponent" value="A friend" />
+                    </div>
+                    <div class="d-flex flex-column align-items-center justify-content-center">
+                        <label class="game_font">A bot</label>
+                        <input type="radio" id="botOpponent" name="opponent" value="A bot" checked/>
+                    </div>
+                </div>
+
+            </fieldset>
+        </div>
+        <div id="specialMode" class=" w-75 text-center  d-flex  align-items-center justify-content-around">
+            <button class="fw-bolder btn menu_buttons game_font" type="button" onclick="backToMainMenu('classic-menu')"> Back </button>
+            <button class="fw-bolder btn menu_buttons game_font" type="submit"> Continue </button>
+        </div>
+   </form>
 </div>
