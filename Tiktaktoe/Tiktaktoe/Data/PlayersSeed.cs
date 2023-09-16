@@ -18,31 +18,33 @@ namespace Tiktaktoe.Data
 
                 if (!context.Players.Any())
                 {
-                    context.Players.AddRange(new List<Player>()
+                    context.Players.AddRange(new List<PlayerModel>()
                     {
-                        new Player()
+                        new PlayerModel()
                         {
                             Name = "Bgsub",
                             OpponentName = "Op",
-                            IsOpponentVirtual = false,
-                            GameMode = GameMode.Classic,
                             GameDuration = "00:30:20",
+                            GridSize = "3 x 3",
+                            GameMode = GameMode.Classic,
                             Wins = 10,
-                            Draws = 1,
                             Loses = 0,
+                            Draws = 1,
                             Score = 10,
+                            isOpponentVirtual = false,
                          },
-                         new Player()
+                         new PlayerModel()
                         {
                             Name = "Yanbr",
                             OpponentName = "Eaz Peaz",
-                            IsOpponentVirtual = true,
-                            GameMode = GameMode.OneMinute,
                             GameDuration = "00:42:20",
+                            GridSize = "3 x 3",
+                            GameMode = GameMode.Classic,
                             Wins = 10,
-                            Draws = 1,
                             Loses = 0,
+                            Draws = 1,
                             Score = 10,
+                            isOpponentVirtual= true,
                          },
                     });
                     context.SaveChanges();

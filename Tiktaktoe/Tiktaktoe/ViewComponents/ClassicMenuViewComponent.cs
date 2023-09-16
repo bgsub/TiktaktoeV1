@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Tiktaktoe.Models;
 
 namespace Tiktaktoe.ViewComponents
 {
@@ -6,7 +7,8 @@ namespace Tiktaktoe.ViewComponents
     {
         public IViewComponentResult Invoke()
         {
-            return View();
+            PlayerModel player = new PlayerModel();
+            return View(player);
         }
     }
 }

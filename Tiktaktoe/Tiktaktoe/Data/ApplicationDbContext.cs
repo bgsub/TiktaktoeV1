@@ -9,6 +9,6 @@ namespace Tiktaktoe.Data
         {
 
         }
-        public DbSet<Player> Players { get; set; }
+        public DbSet<PlayerModel> Players { get; set; }
     }
 }

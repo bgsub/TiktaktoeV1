@@ -5,7 +5,7 @@
 namespace Tiktaktoe.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class InitialPlayers : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -16,13 +16,14 @@ namespace Tiktaktoe.Migrations
                 {
                     Name = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     OpponentName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    IsOpponentVirtual = table.Column<bool>(type: "bit", nullable: false),
-                    GameMode = table.Column<int>(type: "int", nullable: false),
                     GameDuration = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    GridSize = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    GameMode = table.Column<int>(type: "int", nullable: false),
                     Wins = table.Column<int>(type: "int", nullable: false),
                     Loses = table.Column<int>(type: "int", nullable: false),
                     Draws = table.Column<int>(type: "int", nullable: false),
-                    Score = table.Column<int>(type: "int", nullable: false)
+                    Score = table.Column<int>(type: "int", nullable: false),
+                    isOpponentVirtual = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {

@@ -21,7 +21,7 @@ namespace Tiktaktoe.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Tiktaktoe.Models.Player", b =>
+            modelBuilder.Entity("Tiktaktoe.Models.PlayerModel", b =>
                 {
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(450)");
@@ -36,8 +36,9 @@ namespace Tiktaktoe.Migrations
                     b.Property<int>("GameMode")
                         .HasColumnType("int");
 
-                    b.Property<bool>("IsOpponentVirtual")
-                        .HasColumnType("bit");
+                    b.Property<string>("GridSize")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Loses")
                         .HasColumnType("int");
@@ -51,6 +52,9 @@ namespace Tiktaktoe.Migrations
 
                     b.Property<int>("Wins")
                         .HasColumnType("int");
+
+                    b.Property<bool>("isOpponentVirtual")
+                        .HasColumnType("bit");
 
                     b.HasKey("Name");
 

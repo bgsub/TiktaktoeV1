@@ -1,30 +1,28 @@
 ﻿
-@model Player
+@model PlayerModel
 
 <div class="py-3 titles text-center">
     <h2 class="game_font"> New Classic Game </h2>
 </div>
 
 <div class="w-100 text-center">
-    <form class=" d-flex flex-column gap-5 justify-content-around align-items-center">
+    <form asp-controller = "HomeController" method="post" class=" d-flex flex-column gap-5 justify-content-around align-items-center">
         <div id="nickname" class="d-flex flex-column align-items-center justify-content-around">
             <label class="game_font">Enter your nickname</label>
-           <input type="text"/>
+            <input required asp-for=Name type="text"/>
         </div>
         <div id="gridSize">
-            <fieldset>
+            <fieldset >
                 <legend class="game_font">select your grid size</legend>
                 <div class="d-flex align-items-center justify-content-around">
-                    <div class="d-flex flex-column align-items-center justify-content-center">
-                        <label class="game_font">3 x 3</label>
-                        <input type="radio" id="3x3" name="size" value="3 x 3" checked />
-                    </div>
-                    <div class="d-flex flex-column align-items-center justify-content-center">
-                        <label class="game_font">5 x 5</label>
-                        <input type="radio" id="3x3" name="size" value="3 x 3"/>
-                    </div>
+                @foreach (var gridSize in ViewBag.GridSizes)
+                { 
+                        <div class="d-flex flex-column align-items-center justify-content-center">
+                            <label class="game_font">@gridSize</label>
+                            <input required asp-for=GridSize type="radio" id="gridSize" name="size" value=@gridSize />
+                        </div>
+                }
                 </div>
-               
             </fieldset>
             
 
@@ -33,21 +31,20 @@
             <fieldset>
                 <legend class="game_font">who is going to be your opponent</legend>
                 <div class="d-flex align-items-center justify-content-around">
-                    <div class="d-flex flex-column align-items-center justify-content-center">
-                        <label class="game_font"> A friend</label>
-                        <input type="radio" id="frendOpponent" name="opponent" value="A friend" />
-                    </div>
-                    <div class="d-flex flex-column align-items-center justify-content-center">
-                        <label class="game_font">A bot</label>
-                        <input type="radio" id="botOpponent" name="opponent" value="A bot" checked/>
-                    </div>
+                    @foreach (var opponent in ViewBag.OpponentTypes)
+                    {
+                        <div class="d-flex flex-column align-items-center justify-content-center">
+                            <label class="game_font">@opponent</label>
+                            <input required type="radio" id="opponent" name="opponent" value=@opponent />
+                        </div>
+                    }
                 </div>
 
             </fieldset>
         </div>
         <div id="specialMode" class=" w-75 text-center  d-flex  align-items-center justify-content-around">
             <button class="fw-bolder btn menu_buttons game_font" type="button" onclick="backToMainMenu('classic-menu')"> Back </button>
-            <button class="fw-bolder btn menu_buttons game_font" type="submit"> Continue </button>
+            <button class="fw-bolder btn menu_buttons game_font" asp-action="GamePage" type="submit"> Continue </button>
         </div>
    </form>
 </div>
